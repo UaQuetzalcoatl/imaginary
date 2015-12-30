@@ -5,13 +5,14 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Savchenko",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
     "express": "^4.13.3"
   }
 }

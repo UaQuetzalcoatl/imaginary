@@ -1,8 +1,10 @@
 nodeapi:
-	build: client/
-	container_name: nodeapi
+  build: server/
+  restart: always
+  container_name: nodeapi
   ports: ["9090:9090"]
   environment:
-  	- NODE_ENV=dev
-	volumes:
-		- "server/src:/var/www/app"
+    - NODE_ENV=dev
+    - APP_PORT=9090
+  volumes:
+    - "./server/src:/var/www/app/src"

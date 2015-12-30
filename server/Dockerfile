@@ -1,10 +1,9 @@
-FROM node:5.0-wheezy
+FROM node:5.3.0-wheezy
 
-ENV NODE_ENV=dev
-ENV APP_PORT=9090
-
-COPY src /var/www/app
+COPY package.json /var/www/app/package.json
 WORKDIR /var/www/app
 RUN npm install
 
 EXPOSE 9090
+
+CMD ["npm", "start"]
