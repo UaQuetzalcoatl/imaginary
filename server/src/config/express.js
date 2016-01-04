@@ -3,7 +3,8 @@
 var
   cors = require('cors'),
   bodyParser = require('body-parser'),
-  glob = require('glob');
+  glob = require('glob'),
+  config = require('./config');
 
 module.exports = function (app) {
   var
@@ -21,7 +22,7 @@ module.exports = function (app) {
   /**
    * load models
    */
-  models = glob.sync('../model/*.js');
+  models = glob.sync(config.root + '/model/*.js');
   models.forEach(function (model) {
     require(model);
   });
@@ -29,7 +30,7 @@ module.exports = function (app) {
   /**
    * load controllers
    */
-  controllers = glob.sync('../controller/*.js');
+  controllers = glob.sync(config.root + '/controller/*.js');
   controllers.forEach(function (controller) {
     require(controller)(app);
   });
