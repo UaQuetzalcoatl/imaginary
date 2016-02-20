@@ -5,7 +5,8 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "start": "node src/app.js",
+    "start-for-prod": "node src/app.js",
+    "start": "nodemon -e js src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Savchenko",
