@@ -6,7 +6,7 @@ var
   glob = require('glob'),
   config = require('./config');
 
-module.exports = function (app) {
+module.exports = app => {
   var
     controllers,
     models;
@@ -23,7 +23,7 @@ module.exports = function (app) {
    * load models
    */
   models = glob.sync(config.root + '/model/*.js');
-  models.forEach(function (model) {
+  models.forEach(model => {
     require(model);
   });
 
@@ -31,7 +31,7 @@ module.exports = function (app) {
    * load controllers
    */
   controllers = glob.sync(config.root + '/controller/*.js');
-  controllers.forEach(function (controller) {
+  controllers.forEach(controller => {
     require(controller)(app);
   });
 };

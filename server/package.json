@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.14.2",
+    "co": "^4.6.0",
     "cors": "^2.7.1",
     "express": "^4.13.3",
     "glob": "^6.0.3",

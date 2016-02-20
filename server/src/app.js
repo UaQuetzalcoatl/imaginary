@@ -13,6 +13,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 require('./config/express')(app);
 
-var server = app.listen(process.env.APP_PORT || 9090, function () {
+var server = app.listen(process.env.APP_PORT || 9090, () => {
   console.log('Example app listening at http://%s:%s', server.address().address, server.address().port);
 });

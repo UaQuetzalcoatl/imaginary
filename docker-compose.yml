@@ -6,7 +6,7 @@ nodeapi:
   environment:
     - NODE_ENV=dev
     - APP_PORT=9090
-    - MONGO='mongodb://mongodb:27017/imaginary'
+    - MONGO=mongodb://mongodb:27017/imaginary
   volumes:
     - "./server/src:/var/www/app/src"
   links:
